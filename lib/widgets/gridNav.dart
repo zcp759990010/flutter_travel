@@ -8,6 +8,7 @@ class GrudNavWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: _gridNavItems(context),
     );
   }
@@ -24,7 +25,7 @@ class GrudNavWidget extends StatelessWidget {
     if(GridNavModel.hotel != null){
       items.add(Expanded(child:  _gridNavItem(context,2,true),flex: 1,));
     }
-    return  items;
+    return items;
   }
 
   _gridNavItem(BuildContext context,int index, bool isfrist){
@@ -74,7 +75,7 @@ class GrudNavWidget extends StatelessWidget {
         height: 100,
         child: GridView.builder(
             itemCount: datas.length,
-            // shrinkWrap: true,
+             shrinkWrap: true,
             //SliverGridDelegateWithFixedCrossAxisCount 构建一个横轴固定数量Widget
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               //横轴元素个数

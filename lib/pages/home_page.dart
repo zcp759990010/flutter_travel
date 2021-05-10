@@ -7,6 +7,8 @@ import 'package:travel_app/Dao/home_dao.dart';
 import 'package:travel_app/Models/home_dao_model.dart';
 import 'package:travel_app/widgets/local_nav.dart';
 import 'package:travel_app/widgets/gridNav.dart';
+import 'package:travel_app/widgets/salesBix.dart';
+import 'package:travel_app/widgets/sub_nav.dart';
 
 const APP_SCROLL_OFFSET = 100;
 class HomePage extends StatefulWidget {
@@ -53,9 +55,14 @@ class HomePageState extends State<HomePage> {
                   ),
                   Padding(padding: EdgeInsets.fromLTRB(7, 4, 7, 4),
                   child: LocalNav(lists: homeModel.localNavList),),
-                  Padding(padding: EdgeInsets.fromLTRB(7, 4, 7, 4),
-                    child: GrudNavWidget(GridNavModel: homeModel.gridNav),),
+                 // Padding(padding: EdgeInsets.fromLTRB(7, 4, 7, 4),
+                   // child: GrudNavWidget(GridNavModel: homeModel.gridNav),),
+                  Padding(padding: EdgeInsets.fromLTRB(7, 0, 7, 4),
+                  child: SubNav(lists: homeModel.subNavList),),
+                  Padding(padding: EdgeInsets.fromLTRB(7, 0, 7, 4),
+                    child: SaleBox(boxModel: homeModel.salesBox),),
                   Container(
+                    height: 800,
                     child: ListTile(title: Text(restltStr),),
                   ),
                 ],

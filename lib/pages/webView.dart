@@ -207,6 +207,7 @@ class _WebViewState extends State<WebView> {
                   exiting = true;
                 }
               }
+
               break;
             default:
               print(widget.url);
@@ -229,6 +230,7 @@ class _WebViewState extends State<WebView> {
         break;
       }
     }
+    print(contain);
     return contain;
   }
 
